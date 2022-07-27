@@ -23,5 +23,5 @@ steps:
     azureSubscriptionEndpoint: 'Golden Container Repository'
     azureContainerRegistry: 'gticloudopscontainerregistry.azurecr.io'
     command: 'Build an image'
-    dockerFile: 'gticloudopscontainerregistry.azurecr.io/python/Dockerfile'
+    dockerFile: 'gticloudopscontainerregistry.azurecr.io/alpine/Dockerfile'
     imageName: '$(Build.DefinitionName)'
