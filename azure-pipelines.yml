@@ -17,3 +17,11 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: Docker@1
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscriptionEndpoint: 'Golden Container Repository'
+    azureContainerRegistry: 'gticloudopscontainerregistry.azurecr.io'
+    command: 'Build an image'
+    dockerFile: 'gticloudopscontainerregistry.azurecr.io/python'
+    imageName: '$(Build.DefinitionName)'
